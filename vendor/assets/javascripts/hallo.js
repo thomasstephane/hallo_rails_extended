@@ -2194,7 +2194,7 @@ http://hallojs.org
         formattings: {
           bold: true,
           italic: true,
-          strikeThrough: true,
+          strikeThrough: false,
           underline: true
         },
         buttonCssClass: null
