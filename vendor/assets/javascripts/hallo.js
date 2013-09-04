@@ -2169,16 +2169,16 @@ http://hallojs.org
               throw new Error "SelectionNotSet"
             catch error
               widget.options.editable.restoreSelection(widget.lastSelection)
-      
+
             document.execCommand "insertImage", null, jQuery(this).attr('src')
             img = document.getSelection().anchorNode.firstChild
             jQuery(img).attr "alt", jQuery(".caption").value
-      
+
             triggerModified = () ->
               widget.element.trigger "hallomodified"
             window.setTimeout triggerModified, 100
             widget._closeDialog()
-      
+
             addImage = "##{widget.options.uuid}-#{widget.widgetName-addimage"
             @options.dialog.find(".halloimage-activeImage, addImage).click insertImage
       */
@@ -2194,8 +2194,8 @@ http://hallojs.org
         formattings: {
           bold: true,
           italic: true,
-          strikeThrough: false,
-          underline: false
+          strikeThrough: true,
+          underline: true
         },
         buttonCssClass: null
       },
