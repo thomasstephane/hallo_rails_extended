@@ -2,8 +2,8 @@
 require File.expand_path('../lib/hallo_rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Nico"]
-  gem.email         = ["nico.ritsche@gmail.com"]
+  gem.authors       = ["Stef"]
+  gem.email         = ["thomas.stephn@gmail.com"]
   gem.description   = %q{ Use the Hallo editor to edit content in a Rails app. }
   gem.summary       = %q{ Use the Hallo editor to edit content in a Rails app. }
   gem.homepage      = ""
