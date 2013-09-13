@@ -161,11 +161,11 @@ http://hallojs.org
       },
       replaceSelection: function(cb) {
         var newTextNode, r, range, sel, t;
-        if (jQuery.browser.msie) {
-          t = document.selection.createRange().text;
-          r = document.selection.createRange();
-          return r.pasteHTML(cb(t));
-        } else {
+        // if (jQuery.browser.msie) {
+        //   t = document.selection.createRange().text;
+        //   r = document.selection.createRange();
+        //   return r.pasteHTML(cb(t));
+        // } else {
           sel = window.getSelection();
           range = sel.getRangeAt(0);
           newTextNode = document.createTextNode(cb(range.extractContents()));
@@ -173,14 +173,14 @@ http://hallojs.org
           range.setStartAfter(newTextNode);
           sel.removeAllRanges();
           return sel.addRange(range);
-        }
+        // }
       },
       removeAllSelections: function() {
-        if (jQuery.browser.msie) {
-          return range.empty();
-        } else {
+        // if (jQuery.browser.msie) {
+        //   return range.empty();
+        // } else {
           return window.getSelection().removeAllRanges();
-        }
+        // }
       },
       getContents: function() {
         var cleanup, contentClone, plugin;
@@ -2270,7 +2270,7 @@ http://hallojs.org
         editable: null,
         toolbar: null,
         uuid: '',
-        elements: ['h1', 'h2', 'h3', 'p', 'pre', 'blockquote'],
+        elements: ['h1', 'h2', 'h3', 'p'],
         buttonCssClass: null
       },
       populateToolbar: function(toolbar) {
@@ -2303,10 +2303,10 @@ http://hallojs.org
             if (el.hasClass('disabled')) {
               return;
             }
-            if (jQuery.browser.msie) {
-              _this.options.editable.execute('FormatBlock', "<" + tagName + ">");
-              return;
-            }
+            // if (jQuery.browser.msie) {
+            //   _this.options.editable.execute('FormatBlock', "<" + tagName + ">");
+            //   return;
+            // }
             return _this.options.editable.execute('formatBlock', tagName);
           });
           queryState = function(event) {
